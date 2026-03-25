@@ -174,7 +174,7 @@ namespace TodoSynchronizer.Core.Services
                             var url = todoTask.LinkedResources.First().WebUrl;
                             Uri uri;
                             if (Uri.TryCreate(url, UriKind.Absolute, out uri))
-                                dicUrl.Add(url, todoTask);
+                                dicUrl[url] = todoTask;
                         }
                 }
             }
